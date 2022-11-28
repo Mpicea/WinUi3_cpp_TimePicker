@@ -1,0 +1,36 @@
+﻿<Window
+    x:Class="time1picker2.MainWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:time1picker2"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:controls="using:Microsoft.UI.Xaml.Controls"
+    mc:Ignorable="d">
+    
+
+    <StackPanel Orientation="Horizontal"  HorizontalAlignment="Center" VerticalAlignment="Center" Padding="10" Margin="10">
+        <StackPanel Orientation="Vertical" HorizontalAlignment="Center" VerticalAlignment="Center" Padding="10" Margin="10" >
+            <TimePicker Header="Basic"/>
+            <TimePicker Header="quater time" MinuteIncrement="15"/>
+            <TimePicker Header="24 hour clock" ClockIdentifier="24HourClock" />
+            <TimePicker Header="15:30" SelectedTime="15:30"/>
+            <TimePicker Header="time" Time="0:0"/>
+        </StackPanel>
+        <StackPanel Orientation="Vertical" HorizontalAlignment="Center" VerticalAlignment="Center" Padding="10" Margin="10" >
+            <TimePicker Header="Background : Cyan" Background="Cyan"/>
+            <TimePicker Header="BorderBrush : DarkSeaGreen" BorderBrush="DarkSeaGreen"/>
+            <TimePicker Header="BorderThickness : 5" BorderThickness="5"/>
+            <TimePicker Header="CornerRadius" CornerRadius="15"/>
+            <TimePicker Header="fontstyle" FontStyle="Italic"/>
+            <TimePicker Header="fontfamily" FontFamily="휴먼둥근헤드라인"/>
+            <TimePicker Header="fontweight" FontWeight="Bold"/>
+            <TimePicker Header="foreground" Foreground="Aqua"/>
+        </StackPanel>
+        <StackPanel Orientation="Vertical" HorizontalAlignment="Center" VerticalAlignment="Center" Padding="10" Margin="10" >
+            <TimePicker x:Name="checkTimePicker" x:Uid="timePicker" ClockIdentifier="24HourClock"/>
+            <Button Content="Check time" Click="Button_Click"/>
+            <TextBlock x:Name="resultText"/>
+        </StackPanel>
+    </StackPanel>
+</Window>
